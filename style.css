@@ -25,6 +25,8 @@ div img{
     max-width: 992px;
     margin: 0 auto;
     width: 100%;
+    min-width: 320px;
+
 }
 
 .header{
@@ -74,7 +76,7 @@ div img{
     margin-bottom: 10px;
 }
 
-.intro-text a{
+.btn{
     background-color: #122A57;
     color: #EEE;
     text-align: center;
@@ -90,6 +92,11 @@ div img{
  #quem-somos{
     align-items: center;
     justify-content: space-between;
+ }
+
+ #quem-somos img{
+    min-width: 320px;
+    margin: auto;
  }
 
  #quem-somos h2{
@@ -113,9 +120,6 @@ div img{
     width: 90%;
  }
 
- #quem-somos img{
-    min-width: 400px;
- }
 
  .external-container{
     background-color: #122A57;
@@ -168,3 +172,123 @@ div img{
     margin: auto;
     width: 80%;
  }
+
+ #planos{
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+ }
+
+ .plan-area{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+ }
+
+ .plan-card{
+    flex: 1;
+    border: 5px solid #122A57;
+    margin-right: 20px;
+    padding: 10px;
+    max-width: 260px;
+ }
+
+ .plan-card .btn{
+    margin: auto;
+    margin-bottom: 18px;
+ }
+
+ .plan-card ul{
+
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    margin-bottom: 12px;
+ }
+
+ .plan-card ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+ }
+
+ .plan-card ul li::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #122A57;
+    margin-right: 5px;
+ }
+
+ .plan-card h3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+ }
+
+ .plan-card h3::after{
+    content: "";
+    background-color: #122A57;
+    width: 100%;
+    height: 4px;
+    margin: 15px 0;
+ }
+
+#planos h2{
+    font-size: 32px;
+    color: #122A57;
+}
+
+.footer{
+    background-color: #122A57;
+    color: #EEE;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.footer .container{
+    justify-content: space-between;
+}
+
+/* mobile */
+@media(max-width: 992px){
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .intro{
+        flex-direction: column-reverse;
+    }
+
+    .intro-text{
+        width: 100%;
+    }
+
+    #quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    .cards-area{
+        flex-direction: column;
+    }
+
+    .service-card{
+        width: 50%;
+        margin: auto;
+    }
+
+    .plan-area{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .plan-card{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+    }
+
+}
