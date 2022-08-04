@@ -37,6 +37,7 @@ div img{
     color: #EEE;
 }
 
+
 .header .container{
     justify-content: space-between;
     align-items: center;
@@ -56,9 +57,6 @@ div img{
     color: #EEE;
 }
 
-.title{
-
-}
 
 .intro{
     height: 100vh;
@@ -74,6 +72,10 @@ div img{
     color: #122A57;
     font-size: 48px;
     margin-bottom: 10px;
+}
+
+.intro img{
+    min-width: 320px;
 }
 
 .btn{
@@ -255,8 +257,12 @@ div img{
 
 /* mobile */
 @media(max-width: 992px){
-    .flex-container{
+    .container{
         flex-direction: column;
+    }
+
+    .header .container{
+        align-items: flex-start;
     }
 
     .intro{
@@ -283,12 +289,14 @@ div img{
     .plan-area{
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 20px;
     }
 
     .plan-card{
         max-width: 90%;
         margin: auto;
         width: 100%;
+        margin-bottom: 20px;
     }
 
 }
